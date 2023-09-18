@@ -1,0 +1,15 @@
+version: "3"
+services:
+  jpas:
+    image: rhuayhua/jpas-backend:latest
+    container_name: jpas
+    ports:
+      - "8910:8910" 
+  ui:
+    image: rhuayhua/jpas-ui:latest
+    ports:
+      - "8501:8501"
+    environment:
+      - BACKEND_HOST=jpas
+    depends_on:
+      - jpas
