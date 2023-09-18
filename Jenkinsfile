@@ -25,7 +25,7 @@ pipeline {
 
         stage("START JPAS APP") {
             steps {
-                sh "docker-compose up"
+                sh "docker-compose up -d"
             }
         }
     }
