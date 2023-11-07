@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh "echo JOBNAME: ${JENKINS_JOB_NAME}"
                 sh "echo WORKSPACE: ${JENKINS_WORKSPACE}"
-                sh "docker pull rhuayhua/jpas-ui"
+                sh "docker pull rhuayhua/jpas-frontend"
             }
         }
 
